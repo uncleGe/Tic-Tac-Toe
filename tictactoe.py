@@ -102,7 +102,6 @@ def winning(board, game_won):
 	elif board[0][2] is not " " and board[0][2] == board[1][1] and board[0][2] == board[2][0]:
 		game_won = 1
 
-
 	tie = 0
 	move_count = 0
 	for i in board:
