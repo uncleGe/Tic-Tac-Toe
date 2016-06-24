@@ -102,6 +102,7 @@ def winning(board, game_won):
 	elif board[0][2] is not " " and board[0][2] == board[1][1] and board[0][2] == board[2][0]:
 		game_won = 1
 
+
 	tie = 0
 	move_count = 0
 	for i in board:
@@ -131,7 +132,7 @@ def main():
 		tie = how_it_ended[1]
 
 		if game_won:
-			print "YOU DA FUCKIN MAN, " + names[player_decider] + "!"
+			print "YOU DA MAN, " + names[player_decider] + "!"
 
 		if tie:
 			print "\n\n\n\nY'ALLS MAD LAME!"
