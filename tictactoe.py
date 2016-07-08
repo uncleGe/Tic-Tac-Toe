@@ -46,12 +46,10 @@ def enter_move(names, player_decider, board_array_list):
 		player_move = "O"
 
 	while move_can_be_entered == 0:
-
 		while new_move_row is not "A" and new_move_row is not "B" and new_move_row is not "C":
 			new_move_row = raw_input("Your turn, " + names[player_decider] + ". \nPick a row: ")
 		while new_move_col is not "1" and new_move_col is not "2" and new_move_col is not "3":
 			new_move_col = raw_input("Pick a column: ")
-
 
 		move_can_be_entered = 1
 
@@ -69,7 +67,7 @@ def enter_move(names, player_decider, board_array_list):
 		elif new_move_col == "3":
 			col_i = 2
 
-		#prevents players overwriting moves
+		# Prevents players overwriting moves
 		if board_array_list[row_i][col_i] is "X" or board_array_list[row_i][col_i] is "O":
 			print "\n\n\nSeat's taken!\n\n"
 
@@ -84,24 +82,23 @@ def enter_move(names, player_decider, board_array_list):
 	return board_array_list
 
 def winning(board, game_won):
-	#check for row wins
+	# Check for row wins
 	for i in board:
 		if i[0] is not " " and i[0] == i[1] and i[0] == i[2]:
 			game_won = 1
 
-	#check for col wins
+	# Check for horizontal wins
 	col_to_check = 0
 	while col_to_check < 3:
 		if board[0][col_to_check] is not " " and board[0][col_to_check] == board[1][col_to_check] and board[0][col_to_check] == board[2][col_to_check]:
 			game_won = 1
 		col_to_check += 1
 
-	#check for diag wins
+	# Check for diagonal wins
 	if board[0][0] is not " " and board[0][0] == board[1][1] and board[0][0] == board[2][2]:
 		game_won = 1
 	elif board[0][2] is not " " and board[0][2] == board[1][1] and board[0][2] == board[2][0]:
 		game_won = 1
-
 
 	tie = 0
 	move_count = 0
@@ -115,7 +112,6 @@ def winning(board, game_won):
 		game_done = 1
 
 	return (game_won, tie)
-
 
 def main():
 	turn_count = 0
