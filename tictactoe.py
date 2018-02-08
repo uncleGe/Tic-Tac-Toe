@@ -3,8 +3,6 @@ player_decider = 0
 
 board_array_list = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]]
 
-name_list = [FIRST NAME, LAST NAME, MIDDLE NAME]
-
 def get_user_names():
 	print "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 	user1_name = raw_input("What's your name? ")
